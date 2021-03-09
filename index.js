@@ -10,7 +10,7 @@ const morganbody = require('morgan-body');
 
 app.use(morgan('combined'));
 app.use(bodyparser);
-morganbody(app);
+morganbody(app, {logAllReqHeader:true});
 
 // parse the body using own middleware:
 /*app.use((req, res, next) => {
